@@ -134,19 +134,19 @@ function getDocument(node) {
   return node.ownerDocument;
 }
 
-function _getComputedStyle(elem, name, cs) {
-  let computedStyle = cs;
-  let val = '';
-  const d = getDocument(elem);
-  computedStyle = (computedStyle || d.defaultView.getComputedStyle(elem, null));
+// function _getComputedStyle(elem, name, cs) {
+//   let computedStyle = cs;
+//   let val = '';
+//   const d = getDocument(elem);
+//   computedStyle = (computedStyle || d.defaultView.getComputedStyle(elem, null));
 
-  // https://github.com/kissyteam/kissy/issues/61
-  if (computedStyle) {
-    val = computedStyle.getPropertyValue(name) || computedStyle[name];
-  }
+//   // https://github.com/kissyteam/kissy/issues/61
+//   if (computedStyle) {
+//     val = computedStyle.getPropertyValue(name) || computedStyle[name];
+//   }
 
-  return val;
-}
+//   return val;
+// }
 
 const _RE_NUM_NO_PX = new RegExp(`^(${RE_NUM})(?!px)[a-z%]+$`, 'i');
 const RE_POS = /^(top|right|bottom|left)$/;
@@ -192,7 +192,7 @@ function _getComputedStyleIE(elem, name) {
 }
 
 if (typeof window !== 'undefined') {
-  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
+  getComputedStyleX = window.getComputedStyle ? _getComputedStyleIE : _getComputedStyleIE;
 }
 
 function getOffsetDirection(dir, option) {
