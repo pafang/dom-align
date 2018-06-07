@@ -6,7 +6,7 @@
     "dom",
     "align"
   ],
-  "homepage": "http://github.com/yiminghe/dom-align",
+  "homepage": "https://github.com/pafang/dom-align",
   "files": [
     "lib",
     "es"
@@ -16,7 +16,7 @@
   "author": "yiminghe@gmail.com",
   "repository": {
     "type": "git",
-    "url": "git@github.com:yiminghe/dom-align.git"
+    "url": "git+https://github.com/pafang/dom-align.git"
   },
   "bugs": {
     "url": "http://github.com/yiminghe/dom-align/issues"
