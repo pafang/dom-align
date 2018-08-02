@@ -1,4 +1,4 @@
-# dom-align
+# dom-align-ie
 ---
 
 align source html element with target html element flexibly.
